@@ -1,10 +1,11 @@
 import Link from 'next/link';
 
-export default function SuccessPage({
+export default async function SuccessPage({
   searchParams,
 }: {
-  searchParams: { session_id?: string };
+  searchParams: Promise<{ session_id?: string }>;
 }) {
+  const { session_id } = await searchParams;
   return (
     <main className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-md w-full text-center">
@@ -18,9 +19,9 @@ export default function SuccessPage({
             Your coffee has been received! I truly appreciate your support —
             it keeps me fuelled and motivated to keep building.
           </p>
-          {searchParams.session_id && (
+          {session_id && (
             <p className="text-coffee-400 text-xs mt-2 font-mono break-all">
-              Session: {searchParams.session_id}
+              Session: {session_id}
             </p>
           )}
           <div className="my-8 h-px bg-coffee-100"></div>
