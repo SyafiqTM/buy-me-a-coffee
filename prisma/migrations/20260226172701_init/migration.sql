@@ -1,0 +1,9 @@
+-- CreateTable
+CREATE TABLE "Tip" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "name" TEXT NOT NULL,
+    "message" TEXT NOT NULL DEFAULT '',
+    "amount" INTEGER NOT NULL,
+    "currency" TEXT NOT NULL DEFAULT 'usd',
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
