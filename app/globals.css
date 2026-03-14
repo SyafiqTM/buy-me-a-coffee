@@ -5,23 +5,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --background: #fdf8f0;
-  --foreground: #3d2310;
+  --background: #f0f9ff;
+  --foreground: #312e81;
 }
 
 body {
-  background-color: var(--background);
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f0f9ff 100%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: 'Inter', system-ui, sans-serif;
 }
 
 @layer components {
   .card {
-    @apply bg-white rounded-2xl shadow-md border border-coffee-100 p-6;
+    @apply bg-white rounded-2xl shadow-sm border border-coffee-100 p-6;
+    box-shadow: 0 2px 16px 0 rgba(99, 102, 241, 0.08);
   }
 
   .btn-primary {
-    @apply bg-coffee-600 hover:bg-coffee-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg active:scale-95;
+    @apply bg-gradient-to-r from-coffee-500 to-coffee-600 hover:from-coffee-600 hover:to-coffee-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg active:scale-95;
   }
 
   .btn-secondary {
@@ -29,6 +31,6 @@ body {
   }
 
   .input-field {
-    @apply w-full border border-coffee-200 rounded-xl px-4 py-3 text-coffee-900 placeholder-coffee-400 focus:outline-none focus:ring-2 focus:ring-coffee-400 focus:border-transparent bg-coffee-50 transition-all duration-200;
+    @apply w-full border border-coffee-200 rounded-xl px-4 py-3 text-coffee-900 placeholder-coffee-300 focus:outline-none focus:ring-2 focus:ring-coffee-400 focus:border-transparent bg-white transition-all duration-200;
   }
 }

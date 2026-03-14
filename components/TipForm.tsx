@@ -62,10 +62,10 @@ export default function TipForm() {
     <div className="card">
       <div className="mb-6">
         <h2 className="text-2xl font-bold text-coffee-900 mb-1">
-          Support My Work ☕
+          Buy Me a Coffee ☕
         </h2>
         <p className="text-coffee-500 text-sm">
-          Every coffee helps me keep creating. Thank you!
+          Every coffee keeps the explainers coming. Thank you so much!
         </p>
       </div>
 
@@ -120,8 +120,8 @@ export default function TipForm() {
                 }}
                 className={`p-3 rounded-xl border-2 text-center transition-all duration-200 ${
                   !isCustom && selectedAmount === preset.value
-                    ? 'border-coffee-500 bg-coffee-500 text-white shadow-md'
-                    : 'border-coffee-200 bg-white text-coffee-700 hover:border-coffee-400 hover:bg-coffee-50'
+                    ? 'border-coffee-500 bg-gradient-to-br from-coffee-400 to-coffee-600 text-white shadow-md'
+                    : 'border-coffee-200 bg-white text-coffee-700 hover:border-coffee-300 hover:bg-coffee-50'
                 }`}
               >
                 <div className="font-bold text-lg">{preset.label}</div>
